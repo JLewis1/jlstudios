@@ -1,10 +1,33 @@
+$break-small: 767px;
+$break-large: 1178px;
+
 body {
 	background: #000;
 	color: #fff;
 	font-family: 'Nunito', sans-serif;
 
+	.navbar {
+		.navbar-inner {
+			background: none;
+			.nav {
+				li {
+					a {
+						color: #fff;
+						text-shadow: none;
+					}
+				}
+				.active {
+					a {
+						color: #000;
+					}					
+				}
+			}
+		}
+	}
+
 	.jumbotron {
 		position: relative;
+
 
 		.header-txt { 
 			position: absolute; 
@@ -13,8 +36,47 @@ body {
 
 	}
 
-	.cta-link {
-		text-decoration: underline;
-		color: #fff;
+	.main-content {
+		position: relative;
+		.header-txt {
+			position: relative;
+			padding: 20px;
+		}
+		.social {
+			text-align: center;
+		}
+	}
+
+	.cta {
+		.cta-link {
+			text-decoration: none;
+			text-align: center;
+			color: #fff;
+		}
+	}
+}
+
+@media screen and (max-width: $break-small) {
+	body {
+		.jumbotron{
+			.header-txt{
+				width: 100%;
+				padding: 0px;
+				h1 {
+					font-size: 14pt;
+				}
+				h2 {
+					font-size: 13pt;
+				}
+				p {
+					font-size: 12pt;
+				}
+				.btn {
+					width: 50%;
+					padding: 2%;
+					font-size: 12pt;
+				}
+			}
+		}
 	}
 }

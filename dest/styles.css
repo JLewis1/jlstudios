@@ -865,13 +865,43 @@ body {
   background: #000;
   color: #fff;
   font-family: 'Nunito', sans-serif; }
+  body .navbar .navbar-inner {
+    background: none; }
+    body .navbar .navbar-inner .nav li a {
+      color: #fff;
+      text-shadow: none; }
+    body .navbar .navbar-inner .nav .active a {
+      color: #000; }
   body .jumbotron {
     position: relative; }
     body .jumbotron .header-txt {
       position: absolute;
       padding: 20px; }
-  body .cta-link {
-    text-decoration: underline;
+  body .main-content {
+    position: relative; }
+    body .main-content .header-txt {
+      position: relative;
+      padding: 20px; }
+    body .main-content .social {
+      text-align: center; }
+  body .cta .cta-link {
+    text-decoration: none;
+    text-align: center;
     color: #fff; }
+
+@media screen and (max-width: 767px) {
+  body .jumbotron .header-txt {
+    width: 100%;
+    padding: 0px; }
+    body .jumbotron .header-txt h1 {
+      font-size: 14pt; }
+    body .jumbotron .header-txt h2 {
+      font-size: 13pt; }
+    body .jumbotron .header-txt p {
+      font-size: 12pt; }
+    body .jumbotron .header-txt .btn {
+      width: 50%;
+      padding: 2%;
+      font-size: 12pt; } }
 
 /*# sourceMappingURL=main.css.map */
