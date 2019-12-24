@@ -2,6 +2,7 @@
   "name": "jlstudios",
   "version": "0.1.0",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "grunt": "^1.0.1",
     "grunt-concat-css": "^0.3.2",
     "grunt-contrib-concat": "^1.0.1",
@@ -14,5 +15,8 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "semantic-ui": "^2.4.2"
   }
 }

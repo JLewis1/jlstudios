@@ -1,14 +1,31 @@
 $break-small: 767px;
 $break-large: 1178px;
 
+a {
+	color: #fff;
+}
+
 body {
 	background: #000;
 	color: #fff;
 	font-family: 'Nunito', sans-serif;
 
+	.ui.text.menu {
+		.header.item {
+			color: #fff;
+		}
+		.item{
+			color: #fff;
+		}
+		.active.item{
+			color: grey;
+		}
+	}
+
 	.logo {
 		text-align: center; 
-
+		width: 72%;
+    	margin: 25px auto;
 	}
 
 	.navbar {
@@ -33,11 +50,16 @@ body {
 	.jumbotron {
 		position: relative;
 		margin: 0px;
+		min-height: 400px;
 
 		.header-txt { 
 			position: absolute; 
 			padding: 20px;
-			margin-top: 64px;
+			margin-top: 25px;
+			.ui.basic.primary.button{
+				color: #fff!important;
+				box-shadow: 0 0 0 1px #fff inset!important;
+			}
 		}
 
 	}
@@ -65,10 +87,26 @@ body {
 		text-align: center;
 		margin: 20px 0px;
 	}
+	.social {
+		ul {
+			list-style: none;			
+			margin-left: 0px;
+		}
+		li {
+			float: left;
+			width: 19%;
+			a {
+				font-size: 29px;
+			}
+		}
+	}
 }
 
-@media screen and (max-width: $break-small) {
+@media screen and (min-width: $break-small) {
 	body {
+		.logo {
+			width: 31%;
+		}
 		.jumbotron{
 			.header-txt{
 				width: 100%;

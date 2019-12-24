@@ -861,12 +861,23 @@ body {
         page-break-after: avoid;
     }
 }
+a {
+  color: #fff; }
+
 body {
   background: #000;
   color: #fff;
   font-family: 'Nunito', sans-serif; }
+  body .ui.text.menu .header.item {
+    color: #fff; }
+  body .ui.text.menu .item {
+    color: #fff; }
+  body .ui.text.menu .active.item {
+    color: grey; }
   body .logo {
-    text-align: center; }
+    text-align: center;
+    width: 72%;
+    margin: 25px auto; }
   body .navbar .navbar-inner {
     background: none; }
     body .navbar .navbar-inner .nav li a {
@@ -876,11 +887,15 @@ body {
       color: #000; }
   body .jumbotron {
     position: relative;
-    margin: 0px; }
+    margin: 0px;
+    min-height: 400px; }
     body .jumbotron .header-txt {
       position: absolute;
       padding: 20px;
-      margin-top: 64px; }
+      margin-top: 25px; }
+      body .jumbotron .header-txt .ui.basic.primary.button {
+        color: #fff !important;
+        box-shadow: 0 0 0 1px #fff inset !important; }
   body .main-content {
     position: relative; }
     body .main-content .header-txt {
@@ -895,8 +910,18 @@ body {
   body .row-fluid {
     text-align: center;
     margin: 20px 0px; }
+  body .social ul {
+    list-style: none;
+    margin-left: 0px; }
+  body .social li {
+    float: left;
+    width: 19%; }
+    body .social li a {
+      font-size: 29px; }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
+  body .logo {
+    width: 31%; }
   body .jumbotron .header-txt {
     width: 100%;
     padding: 0px; }
