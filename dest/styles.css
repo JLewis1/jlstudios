@@ -868,6 +868,8 @@ body {
   background: #000;
   color: #fff;
   font-family: 'Nunito', sans-serif; }
+  body #main-nav {
+    margin-left: 20px; }
   body .ui.text.menu .header.item {
     color: #fff; }
   body .ui.text.menu .item {
@@ -889,6 +891,12 @@ body {
     position: relative;
     margin: 0px;
     min-height: 400px; }
+    body .jumbotron .banner-img {
+      display: block;
+      width: 100%; }
+      body .jumbotron .banner-img img {
+        width: 100%;
+        border: 2px solid #fff; }
     body .jumbotron .header-txt {
       position: absolute;
       padding: 20px;
@@ -897,7 +905,8 @@ body {
         color: #fff !important;
         box-shadow: 0 0 0 1px #fff inset !important; }
   body .main-content {
-    position: relative; }
+    position: relative;
+    background: #000; }
     body .main-content .header-txt {
       position: relative;
       padding: 20px; }
@@ -918,6 +927,9 @@ body {
     width: 19%; }
     body .social li a {
       font-size: 29px; }
+  body .portfolio {
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
 @media screen and (min-width: 767px) {
   body .logo {
