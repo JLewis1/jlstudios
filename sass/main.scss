@@ -123,6 +123,10 @@ body {
 	}
 }
 
+.portfolio {
+	float: none!important;
+}
+
 #awp-wrapper {
 	top: 0px!important;
 }
@@ -136,6 +140,7 @@ body {
 			.header-txt{
 				width: 100%;
 				padding: 0px;
+				float: none;
 				h1 {
 					font-size: 14pt;
 				}

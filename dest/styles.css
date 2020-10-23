@@ -931,6 +931,9 @@ body {
     padding-top: 20px;
     padding-bottom: 20px; }
 
+.portfolio {
+  float: none !important; }
+
 #awp-wrapper {
   top: 0px !important; }
 
@@ -939,7 +942,8 @@ body {
     width: 31%; }
   body .jumbotron .header-txt {
     width: 100%;
-    padding: 0px; }
+    padding: 0px;
+    float: none; }
     body .jumbotron .header-txt h1 {
       font-size: 14pt; }
     body .jumbotron .header-txt h2 {
