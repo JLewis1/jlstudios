@@ -123,6 +123,10 @@ body {
 	}
 }
 
+#awp-wrapper {
+	top: 0px!important;
+}
+
 @media screen and (min-width: $break-small) {
 	body {
 		.logo {

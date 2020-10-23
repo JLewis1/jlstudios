@@ -15,12 +15,20 @@
       <link href="node_modules/@fontawesome/fontawesome-free/css/all.min.css" rel="stylesheet"> <!--load all styles -->
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+      <link rel="stylesheet" type="text/css" href="plugins/codecanyon-18420897-audio-waveform-player-with-playlist/content/css/awp_default.css">
+      <link rel="stylesheet" type="text/css" href="plugins/codecanyon-18420897-audio-waveform-player-with-playlist/content/css/jquery.mCustomScrollbar.css" media="all"><!-- playlist scroll -->
+ 
       <link href="dest/styles.min.css" rel="stylesheet" media="screen">
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
+      ></script>
+    
+    <!-- <script type="text/javascript" src="plugins/codecanyon-18420897-audio-waveform-player-with-playlist/content/js/jquery-3.1.0.min.js"></script> -->
     <script src="semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="plugins/codecanyon-18420897-audio-waveform-player-with-playlist/content/js/wavesurfer.js"></script>
+    <script type="text/javascript" src="plugins/codecanyon-18420897-audio-waveform-player-with-playlist/content/js/jquery.mCustomScrollbar.concat.min.js"></script><!-- playlist scroll -->
+    <script type="text/javascript" src="plugins/codecanyon-18420897-audio-waveform-player-with-playlist/content/js/new_cb.js"></script>
+    <script type="text/javascript" src="plugins/codecanyon-18420897-audio-waveform-player-with-playlist/content/js/new.js"></script>
         <!-- <script>
           (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-8891819570588202",
@@ -56,7 +64,69 @@
           
         <div class="portfolio span12 cta">
           <h2>Portfolio</h2>
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/466192080&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          <div id="awp-wrapper">
+ 
+            <div class="awp-player-thumb-wrapper">
+         
+                <div class="awp-player-thumb"></div>
+         
+                <div class="awp-playback-toggle"><i class="fa fa-play"></i></div>
+         
+            </div>
+         
+            <div class="awp-player-holder">
+         
+                <div class="awp-waveform-wrap">
+                    <div class="awp-waveform awp-hidden"></div>  
+                    <div class="awp-waveform-img awp-hidden"><!-- image waveform backup -->
+                        <div class="awp-waveform-img-load"></div>
+                        <div class="awp-waveform-img-progress-wrap"><div class="awp-waveform-img-progress"></div></div>
+                    </div>
+                    <span class="awp-waveform-preloader"></span>
+                </div>  
+         
+            </div>
+               
+            <div class="awp-playlist-holder">
+                <div class="awp-playlist-inner">
+                    <div class="awp-playlist-content">
+                      <div id="awp-playlist-list">
+ 
+                        <ul id="playlist-audio1">
+                    
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/Memories 191213.mp3" data-artist="Dirge Within" data-title="Memories" data-thumb="media/audio/2/02.jpg"></li>
+                    
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/Self Medicated Mastered.mp3" data-artist="Seann Bowe" data-title="Self-Medicated" data-thumb="media/audio/2/03.jpg"></li>
+                    
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/02 - Tracer Bullet (24-bit).mp3" data-artist="Synergist" data-title="Tracer Bullet" data-thumb="media/portfolio-covers/tracer-bullet.jpg"></li>
+                           
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/707 201022 Final.mp3" data-artist="Binary Code" data-title="707" data-thumb="media/audio/2/04.jpg"></li>
+                    
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/Blue-171121.mp3" data-artist="Alchemy" data-title="Blue" data-thumb="media/audio/2/05.jpg"></li>
+                    
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/Dichotomies 191226.mp3" data-artist="Friday Nights" data-title="Dichotomies" data-thumb="media/audio/2/06.jpg"></li>
+                    
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/I Wish I Hated You 180214.mp3" data-artist="Chubz" data-title="I Wish I Hated You" data-thumb="media/audio/2/07.jpg"></li>
+
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/I've Been Thinking About You 171211.mp3" data-artist="JSavvy & Super Electric" data-title="About You" data-thumb="media/audio/2/07.jpg"></li>
+
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/Thrillz 180128.mp3" data-artist="CHALLENGER!" data-title="Thrillz" data-thumb="media/audio/2/07.jpg"></li>
+
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/Trust Me 180102.mp3" data-artist="CFM" data-title="Trust Me" data-thumb="media/audio/2/07.jpg"></li>
+
+                           <li class="awp-playlist-item" data-type="audio" data-mp3="media/portfolio-tracks/You've Met With a Terrible Fate, Haven't You 191026.mp3" data-artist="Death At the Revel" data-title="You've Met With a Terrible Fate, Haven't You" data-thumb="media/audio/2/07.jpg"></li>
+                    
+                       </ul>    
+                    
+                   </div>
+                    </div>
+                </div>
+                 
+                <div class="awp-preloader"></div>
+         
+            </div>
+         
+        </div>
         </div>
         <div class="header-txt">
           <h2>Audio Production Services</h2>
@@ -73,7 +143,7 @@
 
     </div> <!-- /container -->
 
-        <script type="text/javascript" src="dest/bundle.js" charset="utf-8"></script>
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -86,6 +156,52 @@
         gtag('config', 'UA-116055111-1');
       </script>
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+      <script type="text/javascript">
+ 
+        var awp_player;  
+        $(document).ready(function($) {
+             
+            var settings = {
+            instanceName:"default2",
+            sourcePath:"",
+            playlistList:"#awp-playlist-list",
+            activePlaylist:"playlist-audio1",
+            activeItem:0,
+            volume:0.5,
+            autoPlay:true,
+            drawWaveWithoutLoad:false,
+            randomPlay:false,
+            loopingOn:true,
+            autoAdvanceToNextMedia:true,
+            mediaEndAction:"loop",
+            soundCloudAppId:"",
+            gDriveAppId:"",
+            useKeyboardNavigationForPlayback:true,
+            usePlaylistScroll:true,
+            playlistScrollOrientation:"vertical",
+            playlistScrollTheme:"light",
+            useDownload:true,
+            facebookAppId:"",
+            useNumbersInPlaylist: true,
+            numberTitleSeparator: ".  ",
+            artistTitleSeparator: " - ",
+            playlistItemContent:"title",
+            wavesurfer:{
+                waveColor: '#F444D9',
+                progressColor: '#33FDFF',
+                barWidth: 3,
+                cursorColor: '#ffffff',
+                cursorWidth: 1,
+                height: 100,
+            }
+        };
+     
+        awp_player = $("#awp-wrapper").awp(settings);
+     
+        });
+     
+    </script>
+    <script type="text/javascript" src="dest/bundle.js" charset="utf-8"></script>
       
     </body>
 </html>

@@ -931,6 +931,9 @@ body {
     padding-top: 20px;
     padding-bottom: 20px; }
 
+#awp-wrapper {
+  top: 0px !important; }
+
 @media screen and (min-width: 767px) {
   body .logo {
     width: 31%; }
