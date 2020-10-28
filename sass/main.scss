@@ -8,13 +8,7 @@ a {
 body {
 	background: #000;
 	color: #fff;
-	font-family: 'Nunito', sans-serif;
-
-	#main-nav {
-		margin-left: 20px;
-	}
-
-	
+	font-family: 'Nunito', sans-serif;	
 
 	.ui.text.menu {
 		.header.item {
@@ -125,6 +119,7 @@ body {
 
 .portfolio {
 	float: none!important;
+	margin-left: 0px!important;
 }
 
 #awp-wrapper {
