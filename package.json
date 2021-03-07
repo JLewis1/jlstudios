@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
-    "grunt": "^1.0.1",
+    "grunt": "^1.3.0",
     "grunt-concat-css": "^0.3.2",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^2.2.1",
