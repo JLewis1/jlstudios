@@ -14,7 +14,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.8.1"
+    "webpack": "^5.80.0"
   },
   "dependencies": {
     "semantic-ui": "^2.4.2"
