@@ -12,7 +12,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "^1.0.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "sass-loader": "^6.0.6",
     "webpack": "^3.8.1"
   },
