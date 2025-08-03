@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .info {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 WebView Test</h1>
+        <p>This page tests the iOS WebView functionality.</p>
+        
+        <div>
+            <button class="btn" onclick="testAlert()">Test Alert</button>
+            <button class="btn" onclick="testConfirm()">Test Confirm</button>
+            <button class="btn" onclick="testLocalStorage()">Test Storage</button>
+        </div>
+        
+        <div id="status" class="status" style="display: none;">
+            <strong>Status:</strong> <span id="statusText"></span>
+        </div>
+        
+        <div class="info">
+            <p><strong>User Agent:</strong></p>
+            <p id="userAgent" style="font-size: 0.8em; word-break: break-all;"></p>
+            <p><strong>Screen Size:</strong> <span id="screenSize"></span></p>
+            <p><strong>Current Time:</strong> <span id="currentTime"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Display device information
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+        document.getElementById('screenSize').textContent = screen.width + 'x' + screen.height;
+        
+        function updateTime() {
+            document.getElementById('currentTime').textContent = new Date().toLocaleTimeString();
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // Test functions
+        function testAlert() {
+            alert('Hello from WebView! This alert should appear in the iOS app.');
+            showStatus('Alert test completed ✅');
+        }
+        
+        function testConfirm() {
+            const result = confirm('Do you want to continue? This tests confirm dialogs in WebView.');
+            showStatus('Confirm test: ' + (result ? 'OK pressed ✅' : 'Cancel pressed ❌'));
+        }
+        
+        function testLocalStorage() {
+            try {
+                const testKey = 'webview-test';
+                const testValue = 'iOS WebView Storage Test - ' + new Date().toISOString();
+                localStorage.setItem(testKey, testValue);
+                const retrieved = localStorage.getItem(testKey);
+                
+                if (retrieved === testValue) {
+                    showStatus('Local Storage test passed ✅');
+                } else {
+                    showStatus('Local Storage test failed ❌');
+                }
+            } catch (error) {
+                showStatus('Local Storage error: ' + error.message + ' ❌');
+            }
+        }
+        
+        function showStatus(message) {
+            const statusDiv = document.getElementById('status');
+            const statusText = document.getElementById('statusText');
+            statusText.textContent = message;
+            statusDiv.style.display = 'block';
+            
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Automatic tests on page load
+        window.addEventListener('load', () => {
+            console.log('WebView test page loaded successfully');
+            showStatus('Page loaded successfully! 🎉');
+        });
+        
+        // Test if we're in a WebView
+        setTimeout(() => {
+            const isWebView = /WebKit/.test(navigator.userAgent) && !/Chrome|Safari/.test(navigator.userAgent);
+            if (isWebView) {
+                showStatus('Running in WebView environment 📱');
+            } else {
+                showStatus('Running in regular browser 🌐');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
